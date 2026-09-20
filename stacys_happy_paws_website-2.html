@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stacy's Happy Paws | Puppies Looking for Loving Homes</title>
+<style>
+:root{--ink:#241b18;--muted:#6f625c;--cream:#fffaf5;--brown:#7a4b35;--gold:#d59b55;--white:#fff}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+nav{position:sticky;top:0;z-index:10;background:rgba(255,250,245,.96);border-bottom:1px solid #eadfd7;padding:14px 6%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1.25rem;font-weight:800;color:var(--brown)} nav a{margin-left:20px;text-decoration:none;color:var(--ink);font-weight:600}
+.hero{padding:90px 6%;background:linear-gradient(135deg,#f8eadb,#fffaf5);display:grid;grid-template-columns:1.2fr .8fr;gap:35px;align-items:center}
+.hero h1{font-size:clamp(2.5rem,6vw,4.7rem);line-height:1.05;margin:0 0 20px}.hero p{font-size:1.12rem;color:var(--muted);max-width:650px}
+.btn{display:inline-block;background:var(--brown);color:white;padding:13px 20px;border-radius:999px;text-decoration:none;font-weight:700;margin:8px 8px 0 0}
+.btn.alt{background:white;color:var(--brown);border:1px solid #d8c4b5}
+.hero-card{background:white;border-radius:28px;padding:30px;box-shadow:0 15px 50px #5b392018;text-align:center}.paw{font-size:7rem}
+section{padding:70px 6%}.section-head{text-align:center;max-width:760px;margin:0 auto 35px}.section-head h2{font-size:2.3rem;margin-bottom:8px}.section-head p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:white;border:1px solid #eee2d9;border-radius:20px;padding:22px;box-shadow:0 8px 25px #5b39200b}.card h3{margin:5px 0 7px}.breed-icon{font-size:2.2rem}.status{font-size:.85rem;color:#5c7355;font-weight:700}
+.about{background:#f3e6da}.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}.step{background:white;padding:25px;border-radius:20px}.step b{display:block;color:var(--brown);font-size:1.2rem;margin-bottom:6px}
+.contact{background:var(--brown);color:white;text-align:center}.contact p{color:#f2e4da}.contact .btn{background:white;color:var(--brown)}
+footer{text-align:center;padding:25px;color:var(--muted);font-size:.9rem}
+@media(max-width:750px){.hero{grid-template-columns:1fr;padding-top:55px}nav{align-items:flex-start}nav .links{display:none}}
+
+.breed-card{font:inherit;text-align:left;cursor:pointer;width:100%;transition:.18s}.breed-card:hover,.breed-card:focus{transform:translateY(-3px);box-shadow:0 12px 30px #5b392018;outline:2px solid #d59b55}.choose{color:var(--brown);font-weight:800;font-size:.9rem}
+.modal{display:none;position:fixed;inset:0;background:#241b1888;z-index:50;padding:20px;overflow:auto}.modal.show{display:flex;align-items:center;justify-content:center}.modal-box{background:white;max-width:560px;width:100%;border-radius:24px;padding:28px;position:relative}.close{position:absolute;right:18px;top:12px;border:0;background:none;font-size:28px;cursor:pointer}.field{margin:12px 0}.field label{display:block;font-weight:700;margin-bottom:5px}.field input,.field textarea,.field select{width:100%;padding:12px;border:1px solid #d9ccc4;border-radius:10px;font:inherit}.payment-box{background:#f8eee6;padding:15px;border-radius:14px;margin-top:15px}.notice{font-size:.9rem;color:var(--muted)}
+''</style>
+</head>
+<body>
+<nav>
+  <div class="logo">🐾 Stacy's Happy Paws</div>
+  <div class="links"><a href="#puppies">Puppies</a><a href="#about">About</a><a href="#process">Process</a><a href="#contact">Contact</a></div>
+</nav>
+
+<header class="hero">
+  <div>
+    <div class="status">PUPPIES • LOVING HOMES • DELIVERY OPTIONS</div>
+    <h1>Find a puppy to bring more joy home.</h1>
+    <p>Welcome to Stacy's Happy Paws — a simple place to explore popular dog breeds and contact us about puppies currently available.</p>
+    <a class="btn" href="#puppies">Browse Breeds</a>
+    <a class="btn alt" href="mailto:stacybrown463w@gmail.com">Email Us</a>
+  </div>
+  <div class="hero-card"><div class="paw">🐶</div><h2>Happy Paws, Happy Homes</h2><p>Ask us about current puppies, pickup, and delivery arrangements.</p></div>
+</header>
+
+<section id="puppies">
+  <div class="section-head">
+    <h2>Breeds We Offer</h2>
+    <p>Our breed catalog includes popular choices in the U.S. Availability can change, so please contact us to confirm a specific puppy.</p>
+  </div>
+  <div class="grid">
+    <button class="card breed-card" type="button" data-breed="French Bulldog">
+      <div class="breed-icon">🐶</div><h3>French Bulldog</h3><p>Small, affectionate companion.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="Labrador Retriever">
+      <div class="breed-icon">🐶</div><h3>Labrador Retriever</h3><p>Friendly and energetic family dog.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="Golden Retriever">
+      <div class="breed-icon">🐶</div><h3>Golden Retriever</h3><p>Social, affectionate companion.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="German Shepherd">
+      <div class="breed-icon">🐶</div><h3>German Shepherd</h3><p>Loyal, intelligent working breed.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="Dachshund">
+      <div class="breed-icon">🐶</div><h3>Dachshund</h3><p>Playful and distinctive small breed.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="Poodle">
+      <div class="breed-icon">🐶</div><h3>Poodle</h3><p>Smart and highly trainable.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="Beagle">
+      <div class="breed-icon">🐶</div><h3>Beagle</h3><p>Curious and cheerful companion.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="Rottweiler">
+      <div class="breed-icon">🐶</div><h3>Rottweiler</h3><p>Confident and devoted.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="German Shorthaired Pointer">
+      <div class="breed-icon">🐶</div><h3>German Shorthaired Pointer</h3><p>Active and athletic.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="Bulldog">
+      <div class="breed-icon">🐶</div><h3>Bulldog</h3><p>Easygoing and affectionate.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="Cane Corso">
+      <div class="breed-icon">🐶</div><h3>Cane Corso</h3><p>Powerful and devoted guardian breed.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="Cavalier King Charles Spaniel">
+      <div class="breed-icon">🐶</div><h3>Cavalier King Charles Spaniel</h3><p>Gentle companion breed.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="Yorkshire Terrier">
+      <div class="breed-icon">🐶</div><h3>Yorkshire Terrier</h3><p>Small and lively companion.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="Australian Shepherd">
+      <div class="breed-icon">🐶</div><h3>Australian Shepherd</h3><p>Bright and energetic.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="Doberman Pinscher">
+      <div class="breed-icon">🐶</div><h3>Doberman Pinscher</h3><p>Alert, athletic and loyal.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="Pembroke Welsh Corgi">
+      <div class="breed-icon">🐶</div><h3>Pembroke Welsh Corgi</h3><p>Playful and intelligent.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="Miniature Schnauzer">
+      <div class="breed-icon">🐶</div><h3>Miniature Schnauzer</h3><p>Spirited small companion.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="Boxer">
+      <div class="breed-icon">🐶</div><h3>Boxer</h3><p>Playful, affectionate and energetic.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="Pomeranian">
+      <div class="breed-icon">🐶</div><h3>Pomeranian</h3><p>Small, bright and outgoing.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="Bernese Mountain Dog">
+      <div class="breed-icon">🐶</div><h3>Bernese Mountain Dog</h3><p>Gentle large family companion.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="Shih Tzu">
+      <div class="breed-icon">🐶</div><h3>Shih Tzu</h3><p>Friendly small companion.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="Great Dane">
+      <div class="breed-icon">🐶</div><h3>Great Dane</h3><p>Gentle giant with a calm nature.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="Boston Terrier">
+      <div class="breed-icon">🐶</div><h3>Boston Terrier</h3><p>Compact and affectionate.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="Chihuahua">
+      <div class="breed-icon">🐶</div><h3>Chihuahua</h3><p>Small, alert and devoted.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="Havanese">
+      <div class="breed-icon">🐶</div><h3>Havanese</h3><p>Cheerful companion breed.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="Border Collie">
+      <div class="breed-icon">🐶</div><h3>Border Collie</h3><p>Highly intelligent and active.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="English Springer Spaniel">
+      <div class="breed-icon">🐶</div><h3>English Springer Spaniel</h3><p>Friendly and energetic sporting breed.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="Miniature American Shepherd">
+      <div class="breed-icon">🐶</div><h3>Miniature American Shepherd</h3><p>Agile and intelligent.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="Shetland Sheepdog">
+      <div class="breed-icon">🐶</div><h3>Shetland Sheepdog</h3><p>Responsive and affectionate.</p><span class="choose">Tap to choose →</span>
+    </button>
+    <button class="card breed-card" type="button" data-breed="Siberian Husky">
+      <div class="breed-icon">🐶</div><h3>Siberian Husky</h3><p>Energetic and striking companion.</p><span class="choose">Tap to choose →</span>
+    </button>
+    </div>
+</section>
+
+<section id="about" class="about">
+  <div class="section-head"><h2>About Stacy's Happy Paws</h2><p>We help prospective owners learn about available puppies and connect with us about pickup or delivery arrangements.</p></div>
+  <div class="grid">
+    <div class="card"><h3>🐾 Puppy Care</h3><p>Ask for the individual puppy's age, care history, vaccination and deworming information before purchase.</p></div>
+    <div class="card"><h3>🏡 Loving Homes</h3><p>We encourage every prospective owner to choose a breed that fits their home, schedule and lifestyle.</p></div>
+    <div class="card"><h3>🚚 Pickup & Delivery</h3><p>Contact us with your location and preferred timing so available arrangements can be discussed.</p></div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="section-head"><h2>How It Works</h2><p>A simple process from your first question to bringing your puppy home.</p></div>
+  <div class="steps">
+    <div class="step"><b>1. Choose a breed</b>Browse the breeds above and tell us which puppy you're interested in.</div>
+    <div class="step"><b>2. Confirm details</b>We'll discuss current availability, price, puppy information, pickup and delivery options.</div>
+    <div class="step"><b>3. Arrange pickup or delivery</b>Once details are agreed, we'll discuss the next steps for getting your puppy home.</div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Ready to find your puppy?</h2>
+  <p>Email us for current availability and puppy details.</p>
+  <a class="btn" href="mailto:stacybrown463w@gmail.com">stacybrown463w@gmail.com</a>
+</section>
+
+
+<div class="modal" id="buyModal">
+  <div class="modal-box">
+    <button class="close" onclick="closeBuy()" aria-label="Close">×</button>
+    <h2 id="selectedTitle">Request this puppy</h2>
+    <p>Tell us which puppy/breed you want. We’ll confirm current availability and the exact total before payment.</p>
+    <form id="buyForm">
+      <input type="hidden" id="selectedBreed">
+      <div class="field"><label>Your name</label><input id="customerName" required></div>
+      <div class="field"><label>Email</label><input id="customerEmail" type="email" required></div>
+      <div class="field"><label>Phone / WhatsApp</label><input id="customerPhone" required></div>
+      <div class="field"><label>Delivery or pickup location</label><input id="customerLocation" required></div>
+      <div class="field"><label>Message</label><textarea id="customerMessage" rows="3" placeholder="Male/female, preferred date, questions, etc."></textarea></div>
+      <div class="payment-box">
+        <strong>Payment</strong>
+        <p class="notice">Cash App and PayPal are temporarily unavailable. Gift-card payment is currently listed as an option. Please contact us first so the puppy, price, and payment details can be confirmed before making any payment.</p>
+        <select id="paymentMethod" required>
+          <option value="">Choose payment method</option>
+          <option>Gift Card</option>
+          <option>Other / arrange with seller</option>
+        </select>
+      </div>
+      <button class="btn" type="submit" style="border:0;width:100%;margin-top:18px">Send Puppy Request</button>
+    </form>
+  </div>
+</div>
+<script>
+const modal=document.getElementById('buyModal');
+document.querySelectorAll('.breed-card').forEach(card=>{
+  card.addEventListener('click',()=>{
+    const breed=card.dataset.breed;
+    document.getElementById('selectedBreed').value=breed;
+    document.getElementById('selectedTitle').textContent='I want the '+breed;
+    modal.classList.add('show');
+  });
+});
+function closeBuy(){modal.classList.remove('show')}
+modal.addEventListener('click',e=>{if(e.target===modal)closeBuy()});
+document.getElementById('buyForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const breed=document.getElementById('selectedBreed').value;
+  const name=document.getElementById('customerName').value;
+  const email=document.getElementById('customerEmail').value;
+  const phone=document.getElementById('customerPhone').value;
+  const location=document.getElementById('customerLocation').value;
+  const method=document.getElementById('paymentMethod').value;
+  const msg=document.getElementById('customerMessage').value;
+  const subject=encodeURIComponent('Puppy Request - '+breed);
+  const body=encodeURIComponent(`Hello Stacy's Happy Paws,\n\nI am interested in: ${breed}\nName: ${name}\nEmail: ${email}\nPhone/WhatsApp: ${phone}\nLocation: ${location}\nPayment method: ${method}\nMessage: ${msg}\n\nPlease confirm availability, price and delivery/pickup details.`);
+  window.location.href=`mailto:stacybrown463w@gmail.com?subject=${subject}&body=${body}`;
+});
+</script>
+<footer>© 2026 Stacy's Happy Paws. All rights reserved.</footer>
+</body>
+</html>
